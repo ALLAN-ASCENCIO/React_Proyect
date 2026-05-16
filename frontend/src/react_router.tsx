@@ -282,7 +282,7 @@ function AgregarJuegoPage() {
       return;
     }
     try {
-      await axios.post("https://react-proyect-u58e.onrender.comapi/games", {
+      await axios.post("https://react-proyect-u58e.onrender.com/api/games", {
         ...form,
         rating: parseInt(form.rating),
       });
