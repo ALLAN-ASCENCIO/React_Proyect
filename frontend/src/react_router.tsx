@@ -77,7 +77,7 @@ function Home() {
   const [games, setGames] = useState<Game[]>([]);
 
   useEffect(() => {
-    axios.get("http://localhost:4000/api/games")
+    axios.get("https://react-proyect-u58e.onrender.com")
       .then(res => setGames(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -143,7 +143,7 @@ function FormularioPage() {
       return;
     }
     try {
-      await axios.post("http://localhost:4000/api/registros", form);
+      await axios.post("https://react-proyect-u58e.onrender.com", form);
       setEnviado(true);
     } catch {
       setError("Error al registrar. Intenta de nuevo.");
@@ -282,7 +282,7 @@ function AgregarJuegoPage() {
       return;
     }
     try {
-      await axios.post("http://localhost:4000/api/games", {
+      await axios.post("https://react-proyect-u58e.onrender.com", {
         ...form,
         rating: parseInt(form.rating),
       });
